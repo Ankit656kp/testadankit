@@ -1,7 +1,7 @@
 {
   "name": "AdsBot - Multi Account Ads Broadcasting Bot",
   "description": "A full-featured Telegram Ads Automation Bot with premium system, force join, payment verification, raw logs, and broadcast features.",
-  "repository": "https://github.com/YourUsername/AdsBot",
+  "repository": "https://github.com/Ankit656kp/AdsBot",
   "logo": "https://telegra.ph/file/7f8b5c9a42c98ddea91b2.jpg",
   "keywords": [
     "telegram",
@@ -52,8 +52,12 @@
       "description": "Link to your QR code image",
       "required": true
     },
-    "DATABASE_URL": {
-      "description": "MongoDB database URL",
+    "MONGO_URI": {
+      "description": "MongoDB connection URI",
+      "required": true
+    },
+    "DB_NAME": {
+      "description": "MongoDB Database Name",
       "required": true
     },
     "BLAZE_PRICE": {
