@@ -20,7 +20,7 @@ PAYMENT_CONTACT = os.getenv('PAYMENT_CONTACT', '@YourAdmin')
 # 🔹 Start Image
 START_IMAGE = os.getenv(
     'START_IMAGE',
-    'https://files.catbox.moe/thmj4x.jpg'
+    'https://files.catbox.moe/9umxxg.jpg'
 )
 
 # 🔹 Plans
