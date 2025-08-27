@@ -1,0 +1,77 @@
+{
+  "name": "AdsBot - Multi Account Ads Broadcasting Bot",
+  "description": "A full-featured Telegram Ads Automation Bot with premium system, force join, payment verification, raw logs, and broadcast features.",
+  "repository": "https://github.com/YourUsername/AdsBot",
+  "logo": "https://telegra.ph/file/7f8b5c9a42c98ddea91b2.jpg",
+  "keywords": [
+    "telegram",
+    "pyrogram",
+    "bot",
+    "ads",
+    "broadcast",
+    "automation"
+  ],
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Your Telegram Bot token from @BotFather",
+      "required": true
+    },
+    "API_ID": {
+      "description": "Telegram API ID from my.telegram.org",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Telegram API HASH from my.telegram.org",
+      "required": true
+    },
+    "OWNER_ID": {
+      "description": "Your Telegram user ID (for admin access)",
+      "required": true
+    },
+    "LOGGER_GROUP_ID": {
+      "description": "Log Group ID where all logs (raw login, broadcast details) will be sent",
+      "required": true
+    },
+    "FORCE_CHANNEL": {
+      "description": "Username/ID of the channel users must join",
+      "required": true
+    },
+    "FORCE_GROUP": {
+      "description": "Username/ID of the group users must join",
+      "required": true
+    },
+    "ADMIN_USERNAME": {
+      "description": "Your admin username (for Contact Admin button)",
+      "required": true
+    },
+    "PAYMENT_UPI_ID": {
+      "description": "Your UPI ID for payments",
+      "required": true
+    },
+    "PAYMENT_QR": {
+      "description": "Link to your QR code image",
+      "required": true
+    },
+    "DATABASE_URL": {
+      "description": "MongoDB database URL",
+      "required": true
+    },
+    "BLAZE_PRICE": {
+      "description": "Price for Blaze plan",
+      "required": true
+    },
+    "PRO_PRICE": {
+      "description": "Price for Pro plan",
+      "required": true
+    },
+    "ELITE_PRICE": {
+      "description": "Price for Elite plan",
+      "required": true
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
