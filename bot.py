@@ -8,7 +8,13 @@ from logger_utils import send_owner_log
 import user_login
 from bson import ObjectId
 
-app = Client('adsbot', bot_token=config.BOT_TOKEN)
+# ✅ FIX: Pass devil api_id & api_anhash
+app = Client(
+    "adsbot",
+    api_id=config.API_ID,
+    api_hash=config.API_HASH,
+    bot_token=config.BOT_TOKEN
+)
 
 # --- Helpers ---
 async def check_membership(client, chat, user_id):
@@ -50,7 +56,7 @@ async def dive_cb(c, cb):
 async def recheck_cb(c, cb):
     await dive_cb(c, cb)
 
-# --- Payment flow ---
+# --- Payment flow devil---
 @app.on_callback_query(filters.regex('^buy_premium$'))
 async def buy_premium(c, cb):
     kb_rows = []
@@ -248,7 +254,7 @@ async def start_broadcast(c, cb):
         return await cb.answer('No template set', show_alert=True)
     if not u.get('accounts'):
         return await cb.answer('No logged-in accounts', show_alert=True)
-    # For simplicity use last account; you can add selection UI later
+    # For simplicity devil last account; you can add selection UI later
     sess_id = u['accounts'][-1]['session_id']
     sess_doc = sess_col.find_one({'_id': ObjectId(sess_id)})
     if not sess_doc or not sess_doc.get('groups'):
